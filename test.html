@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Scroll Event Example</title> 
+	<style> 
+		body { 
+			height: 1000px; 
+		} 
+
+		.myDiv { 
+			width: 200px; 
+			height: 200px; 
+			background-color: red; 
+			margin: 400px auto; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<div id="div1" class="myDiv"></div> 
+
+	<script> 
+		function isElementVisible(element) { 
+			const elementTop = element.offsetTop; 
+			const elementBottom = elementTop 
+				+ element.offsetHeight; 
+			const viewportTop = window.pageYOffset; 
+			const viewportBottom = viewportTop 
+				+ window.innerHeight; 
+
+			return ( 
+				elementBottom > viewportTop && 
+				elementTop < viewportBottom
+			); 
+		} 
+
+		const elementToCheck = document.getElementById('div1'); 
+
+		window.addEventListener('scroll', () => { 
+			if (isElementVisible(elementToCheck)) { 
+				console.log('Element is visible in viewport'); 
+			} else { 
+				console.log('Element is not visible in viewport'); 
+			} 
+		}); 
+	</script> 
+</body> 
+
+</html>
