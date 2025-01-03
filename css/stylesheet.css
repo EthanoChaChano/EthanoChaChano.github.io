@@ -13,13 +13,13 @@
   src: url(../font/lemon_milk/LEMONMILK-Bold.otf) format("opentype");
 }
 
+/* Default Styling ----------- */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-image: url('../img/Background.png');
-  background-size: 100vmax;
   text-align: center;
   font-family: 'LemonMilk', Verdana, Geneva, Tahoma, sans-serif;
   margin: 0%;
@@ -28,14 +28,21 @@ body {
 
 h1 {
   color: rgb(255, 204, 0);
-  font-size: 5vmax;
   margin: 0%;
 }
 
 h2 {
   color: rgb(200, 200, 200);
-  font-size: 1.8vmax;
   margin: 0%
+}
+
+h3 {
+  color: #eebf07;
+}
+
+h5 {
+  color: rgba(135, 115, 0);
+  margin: 0;
 }
 
 p {
@@ -47,36 +54,26 @@ ul {
   color: rgb(200, 200, 200);
 }
 
-.row {
+#about .row {
   display: flex;
   justify-content: center;
   /* Centers the columns horizontally */
   align-items: center;
   /* Centers the columns vertically (if they have different heights) */
   flex-wrap: wrap;
-  /* Allows columns to wrap on smaller screens */
-  margin-bottom: 10vh;
-  padding: 0% 1% 0% 1%;
 }
 
-/* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
   background-color: #17131E;
   z-index: 99;
-  padding: 1% 0 1% 0;
 }
 
-/* Style the header links */
 .header a {
   color: #473C5E;
   text-align: center;
   text-decoration: none;
-  font-size: 200%;
-  line-height: 25px;
-  padding: 100% 5% 100% 5%;
 }
-
 
 /* Change the background color on mouse-over */
 .header a:hover {
@@ -106,25 +103,8 @@ footer p {
   padding: 0.5%;
 }
 
-/*SVG*/
-svg {
-  width: 3vw;
-  fill: #ffffff;
-  margin: 35% 0% -35% 0%;
-}
-
 svg:hover {
   fill: #8f8f8f;
-}
-
-/*Social Media Links*/
-.fa {
-  padding: 1%;
-  font-size: 100%;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 5px;
-  border-radius: 50%;
 }
 
 .fa:hover {
@@ -147,61 +127,597 @@ svg:hover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* Ensures the image scales responsively */
-  width: 100vw;
-  /* Full width of the container */
-  height: 100vh;
-  /* Full viewport height */
-  min-height: 100%;
-  /* Ensure the section has at least full viewport height */
-  display: flex;
-  /* Enables Flexbox */
-  justify-content: center;
-  /* Horizontally centers content */
-  align-items: center;
-  /* Vertically centers content */
-  position: relative;
-  /* Ensures proper positioning of content */
-}
-#home h1{
-  color: white;
-}
-#backgroundVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  object-fit: cover; /* Ensure the video fills the entire screen */
-  z-index: 1; /* Keep the video behind the content */
-}
-/* Styles for the content */
-.content {
-  z-index: 2;
-  color : rgb(139, 174, 172);
-  border-style: solid;
-  border-color: rgba(255, 204, 0, 0.75);
-  border-width: medium;
-  padding: 0% 1%;
 }
 
-#about {
-  background-color: rgba(50, 50, 50, 0.5);
-  background-position: center;
-  margin: 5% 20% 5% 20%;
-  height: 100vmin;
-  display: flex;
-  justify-content: center;
-  /* Centers the columns horizontally */
-  align-items: center;
-  /* Centers the columns vertically (if they have different heights) */
-  flex-wrap: wrap;
-  /* Allows columns to wrap on smaller screens */
+#home h1 {
+  color: white;
+}
+
+#decorator {
+  background-image: url("https://static.wixstatic.com/media/11062b_952485dce28e4eac9e9f09d63fdc9ada~mv2.jpg/v1/fill/w_980,h_527,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_952485dce28e4eac9e9f09d63fdc9ada~mv2.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-body p,
+ul {
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal-body h6 {
+  color: #FFC000;
   text-align: justify;
 }
 
-  .aboutBorder {    
-    color : rgb(139, 174, 172);
+.Comment {
+  color: rgb(163, 167, 184);
+  margin: 0;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width : 768px) {
+  .header {
+    display: none;
+  }
+
+  body {
+    background-size: 100vmax;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 17.5px;
+  }
+
+  #about .row {
+    /* Allows columns to wrap on smaller screens */
+    margin-bottom: 10vh;
+    padding: 0% 1% 0% 1%;
+  }
+
+  /* Style the header with a grey background and some padding */
+  .header {
+    padding: 2% 0 2% 0;
+  }
+
+  /* Style the header links */
+  .header a {
+    font-size: 200%;
+    line-height: 25px;
+    padding: 0% 2.5% 0% 2.5%;
+  }
+
+  /*SVG*/
+  svg {
+    width: 50px;
+    fill: #ffffff;
+    margin: 50% 0% -50% 0%;
+  }
+
+  /*Social Media Links*/
+  .fa {
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+  }
+
+  #home {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .content {
+    z-index: 2;
+    color: rgb(139, 174, 172);
+    border-style: solid;
+    border-color: rgba(255, 204, 0, 0.75);
+    border-width: medium;
+    padding: 0% 1%;
+  }
+
+  #about {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 10% 2% 0% 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+
+  #about .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .aboutBorder {
+    color: rgb(139, 174, 172);
+    border-style: solid;
+    border-color: rgba(255, 204, 0, 0.75);
+    padding: 1% 1% 1% 5%;
+  }
+
+  #about h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 2.5%;
+    font-size: 12vw;
+  }
+
+  #about p,
+  #about ul {
+    font-size: 16px;
+  }
+
+  #project {
+    padding: 5% 1% 1% 1%;
+  }
+
+  #project h1 {
+    margin-top: 2.5vh;
+    font-size: 12vw;
+  }
+
+  #project .carousel-item button {
+    padding: 0;
+    margin: 0% 4% 0% 4%;
+    background-color: #ffffff00;
+    border: none;
+  }
+
+  #project img {
+    border-radius: 2.5%;
+    width: 100%;
+  }
+
+  /*Project Carousel*/
+  .carousel-inner {
+    padding: 1em;
+  }
+
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    background-color: #292333;
+  }
+
+  .card p {
+    color: white;
+    text-align: left;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #22202b;
+    opacity: 7.5;
+    width: 6vh;
+    height: 6vh;
+    border: solid;
+    border-radius: 10%;
+    border-width: medium;
+    border-color: #dec6123f;
+    border-style: solid;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 50%;
+      display: block;
+    }
+
+    .carousel-inner {
+      display: flex;
+    }
+  }
+
+  .card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    max-height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
+
+  #decorator {
+    width: 100%;
+    height: 25vh;
+    min-height: 100%;
+    margin: 2.5% 0%;
+  }
+
+  #contact {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 2.5% 10%;
+  }
+
+  .modal-content {
+    background-color: #292333;
+    color: whitesmoke;
+  }
+
+  .modal_img {
+    margin: 5px;
+    width: 100%;
+  }
+
+  .modal_img_additional {
+    margin-bottom: 25px;
+    width: 90%;
+  }
+}
+
+/* Tablet ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  body {
+    background-size: 100vmax;
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 27.5px;
+  }
+
+  #about .row {
+    /* Allows columns to wrap on smaller screens */
+    margin-bottom: 10vh;
+    padding: 0% 1% 0% 1%;
+  }
+
+  /* Style the header with a grey background and some padding */
+  .header {
+    padding: 2% 0 2% 0;
+  }
+
+  /* Style the header links */
+  .header a {
+    font-size: 200%;
+    line-height: 25px;
+    padding: 0% 2.5% 0% 2.5%;
+  }
+
+  /*SVG*/
+  svg {
+    width: 75px;
+    fill: #ffffff;
+    margin: 50% 0% -50% 0%;
+  }
+
+  /*Social Media Links*/
+  .fa {
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+  }
+
+  #home {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .content {
+    z-index: 2;
+    color: rgb(139, 174, 172);
+    border-style: solid;
+    border-color: rgba(255, 204, 0, 0.75);
+    border-width: medium;
+    padding: 0% 1%;
+  }
+
+  #about {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 10% 2% 0% 2%;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+
+  #about .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+
+  .aboutBorder {
+    color: rgb(139, 174, 172);
+    border-style: solid;
+    border-color: rgba(255, 204, 0, 0.75);
+    padding: 1% 1% 1% 5%;
+  }
+
+  #about h1 {
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 2.5%;
+    font-size: 7.5vw;
+  }
+
+  #about p,
+  #about ul {
+    font-size: 16px;
+  }
+
+  #project {
+    padding: 5% 1% 1% 1%;
+  }
+
+  #project h1 {
+    margin-top: 2.5vh;
+    font-size: 7.5vw;
+  }
+
+  #project .carousel-item button {
+    padding: 0;
+    margin: 0% 4% 0% 4%;
+    background-color: #ffffff00;
+    border: none;
+  }
+
+  #project img {
+    border-radius: 2.5%;
+    width: 100%;
+  }
+
+  /*Project Carousel*/
+  .carousel-inner {
+    padding: 1em;
+  }
+
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    background-color: #292333;
+  }
+
+  .card p {
+    color: white;
+    text-align: left;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #22202b;
+    opacity: 7.5;
+    width: 6vh;
+    height: 6vh;
+    border: solid;
+    border-radius: 10%;
+    border-width: medium;
+    border-color: #dec6123f;
+    border-style: solid;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 50%;
+      display: block;
+    }
+
+    .carousel-inner {
+      display: flex;
+    }
+  }
+
+  .card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    max-height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
+
+  #decorator {
+    width: 100%;
+    height: 25vh;
+    min-height: 100%;
+    margin: 2.5% 0%;
+  }
+
+  #contact {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 2.5% 10%;
+  }
+
+  .modal-content {
+    background-color: #292333;
+    color: whitesmoke;
+  }
+
+  .modal_img {
+    margin: 5px;
+    width: 100%;
+  }
+
+  .modal_img_additional {
+    margin-bottom: 25px;
+    width: 90%;
+  }
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1024px) {
+  body {
+    background-size: 100vmax;
+  }
+
+  h1 {
+    font-size: 5vmax;
+  }
+
+  h2 {
+    font-size: 1.8vmax;
+  }
+
+  #about .row {
+    /* Allows columns to wrap on smaller screens */
+    margin-bottom: 10vh;
+    padding: 0% 1% 0% 1%;
+  }
+
+  /* Style the header with a grey background and some padding */
+  .header {
+    padding: 1% 0 1% 0;
+  }
+
+  /* Style the header links */
+  .header a {
+    font-size: 200%;
+    line-height: 25px;
+    padding: 0% 5% 0% 5%;
+  }
+
+  /*SVG*/
+  svg {
+    width: 3vw;
+    fill: #ffffff;
+    margin: 35% 0% -35% 0%;
+  }
+
+  /*Social Media Links*/
+  .fa {
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+  }
+
+  #home {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .content {
+    z-index: 2;
+    color: rgb(139, 174, 172);
+    border-style: solid;
+    border-color: rgba(255, 204, 0, 0.75);
+    border-width: medium;
+    padding: 0% 1%;
+  }
+
+  #about {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 5% 20% 0% 20%;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+  #about .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+
+  .aboutBorder {
+    color: rgb(139, 174, 172);
     border-style: solid;
     border-color: rgba(255, 204, 0, 0.75);
     padding: 1% 1% 1% 5%;
@@ -213,91 +729,120 @@ svg:hover {
     margin-bottom: 2.5%;
     font-size: 5vw;
   }
-  #about p, #about ul{
+
+  #about p,
+  #about ul {
     font-size: 2vh;
   }
 
-#project {
-  padding: 5% 1% 1% 1%;
-  background-color: rgba(50, 50, 50, 0.25);
-}
+  #project {
+    padding: 5% 1% 1% 1%;
+  }
+
   #project h1 {
     margin-top: 2.5vh;
   }
-  #project button {
+
+  #project .carousel-item button {
     padding: 0;
+    margin: 0% 4% 0% 4%;
+    background-color: #ffffff00;
+    border: none;
   }
+
   #project img {
     border-radius: 2.5%;
     width: 100%;
+    object-fit: contain;
   }
 
+  /*Project Carousel*/
   .carousel-inner {
     padding: 1em;
   }
+
   .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
+    background-color: #292333;
   }
+
+  .card p {
+    color: white;
+    text-align: left;
+  }
+
   .carousel-control-prev,
   .carousel-control-next {
     background-color: #22202b;
-    opacity :7.5;
+    opacity: 7.5;
     width: 6vh;
     height: 6vh;
+    border: solid;
     border-radius: 10%;
     border-width: medium;
-    border-color: #5a576b;
+    border-color: #dec6123f;
     border-style: solid;
     top: 50%;
     transform: translateY(-50%);
   }
+
   @media (min-width: 768px) {
     .carousel-item {
       margin-right: 0;
       flex: 0 0 33.333333%;
       display: block;
     }
+
     .carousel-inner {
       display: flex;
     }
   }
+
   .card .img-wrapper {
-      max-width: 100%;
-      height: 13em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .card img {
-      max-height: 100%;
+    max-height: 100%;
   }
+
   @media (max-width: 767px) {
     .card .img-wrapper {
       height: 17em;
     }
   }
 
-#decorator {
-  background-image: url("https://static.wixstatic.com/media/11062b_952485dce28e4eac9e9f09d63fdc9ada~mv2.jpg/v1/fill/w_980,h_527,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_952485dce28e4eac9e9f09d63fdc9ada~mv2.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Ensures the image scales responsively */
-  width: 100%;
-  /* Full width of the container */
-  height: 25vh;
-  /* Full viewport height */
-  min-height: 100%;
-  /* Ensure the section has at least full viewport height */
-  margin: 2.5% 0%;
-}
+  #decorator {
+    width: 100%;
+    height: 50vh;
+    min-height: 100%;
+    margin: 2.5% 0%;
+  }
 
-#contact {
-  background-color: rgba(50, 50, 50, 0.5);;
-  background-position: center;
-  margin: 2.5% 10%;
-}
+  #contact {
+    background-color: rgba(50, 50, 50, 0.5);
+    background-position: center;
+    margin: 2.5% 10%;
+  }
 
+  .modal-content {
+    background-color: #292333;
+    color: whitesmoke;
+  }
+
+  .modal_img {
+    margin: 5px;
+    width: 100%;
+  }
+
+  .modal_img_additional {
+    margin-bottom: 25px;
+    width: 50%;
+  }
+}

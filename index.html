@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ethan Chan Development</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+    <div class="header sticky" id="header">
+        <a class="headerBtn active" id="headerHome" href="#home">Home</a>
+        <a class="headerBtn" id="headerAbout" href="#about">About Me</a>
+        <a class="headerBtn" id="headerProject" href="#project">Projects</a>
+        <a class="headerBtn" id="headerContact" href="#contact">Contact</a>
+    </div>
+
+
+    <main>
+        <section id="home">
+            <video autoplay muted loop id="backgroundVideo">
+                <source src="CoverVideo.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <div class="content">
+                <a href="#home" style="text-decoration: none;">
+                    <h1><b>ETHAN CHAN</b></h1>
+                    <h2>Game Developer and Programmer</h2>
+                </a>
+                <a href="#about">
+                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="6.443 47.497 187.114 105.008"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="6.443 47.497 187.114 105.008" role="presentation"
+                        aria-hidden="true" aria-label="">
+                        <g>
+                            <path
+                                d="M174.476 51.261l-74.704 74.193L25.578 50.75c-4.287-4.316-11.566-4.341-15.882-.054s-4.341 11.565-.055 15.882l82.107 82.673c4.287 4.316 11.566 4.341 15.882.055l82.673-82.107c4.316-4.287 4.341-11.566.055-15.882s-11.235-4.342-15.882-.056z">
+                            </path>
+                        </g>
+
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h1><b>About Me</b></h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>Hello, I'm Ethan, a passionate game developer and programmer from the United Kingdom.</p>
+                    <p>I graduated from the University of Sussex in 2024, where I studied Games and Multimedia
+                        Environments and earned a First Class Honours degree. <br> </p>
+                    <ul class="aboutBorder">
+                        <p style="text-align: center; color: rgb(195, 233, 230);">Some of my notable
+                            academic achievements include:<br></p>
+                        <li>81% for my Individual Project (Dissertation), <br> </li>
+                        <li>87% for Game Design and Development, <br> </li>
+                        where I scored <br>
+                        <li>92% for the game</li>
+                        "The Lab" (which I developed during my course).
+                    </ul>
+                    <p> I have been passionate about game development from a young age, starting with Pygame on an old
+                        PC when I was
+                        just 12
+                        years old. Today, I focus on developing and publishing games using Unity, and I continue to
+                        pursue my passion
+                        for
+                        creating innovative and engaging experiences. </p>
+                    <p style="text-align: center; color: rgb(163, 167, 184);"> This is my personal portfolio, where you
+                        can explore projects I've worked on both individually
+                        and as part of a
+                        team.</p>
+                </div>
+                <div class="col-sm-4">
+                    <img class="image" src="img/Profile.png" title="A picture of myself!">
+                </div>
+            </div>
+        </section>
+
+        <section id="decorator"> </section>
+
+        <section id="project">
+            <h1><b>Projects</b></h1>
+            <h2>Projects I've worked on</h2>
+            <p>Click to learn more!</p>
+
+            <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <button type="button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal1">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="img/Ace_Up/Cover.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Ace Up</h5>
+                                    <p class="card-text">"Ace Up" is a Blackjack game developed as part of my final year
+                                        university project. The game experiments on the creative
+                                        potential of merging genres within the gaming space by combining the casual
+                                        tabletop game with a fast-paced first-person shooter. <br> I had the opportunity
+                                        to showcase this game at Develop:Brighton in 2024.</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button type="button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal4">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="img/The_Person_In_The_Cabin/Cover.png"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">The Person, In the Cabin, In the Woods</h5>
+                                    <p class="card-text">"The Person, In the Cabin, In the Woods" is a horror game
+                                        developed during my final year of university. This project uses free assets
+                                        sourced online which allowed me to focus on creating a immersive narrative with
+                                        an intense atmosphere, and engaging horror mechanics.</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button type="button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal3">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="img/The_Lab/Cover.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">The Lab</h5>
+                                    <p class="card-text">"The Lab" is a narrative-driven game developed during my second
+                                        year of university<br>The game features a
+                                        mix
+                                        of mechanics and themes, with each level offering a unique gameplay experience
+                                        that enhances the overarching story.</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button type="button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal5">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="img/Rebellion/Cover.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Rebellion</h5>
+                                    <p class="card-text">"Rebellion" is a 3D platformer developed in collaboration with
+                                        my coursemates during my second year of university. <br> In this project, I took
+                                        on
+                                        the role of lead programmer, responsible for developing the core movement
+                                        mechanics of the main character.</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button type="button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal2">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="img/Finding_Home/Cover.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Finding Home</h5>
+                                    <p class="card-text">"Finding Home" is my submission for the GJL Game Parade Jam
+                                        (Fall 2021), where the theme was "Leave Something Behind." <br>This game was my
+                                        first-ever participation in a game jam, providing an opportunity to create a
+                                        fully functional game in a limited timeframe while adhering to a specific theme.
+                                    </p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" title="Previous" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" title="Next" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </section>
+
+        <section id="decorator"> </section>
+
+        <section id="contact">
+            <h1><b>Contact Me</b></h1>
+            <p> If you have any questions or would like to connect, feel free to reach out to me at: <br>
+                <a href="mailto:ethanochachano@gmail.com"
+                    title="Click to send me an email!">ethanochachano@gmail.com</a>
+            </p>
+            <p>or use one of these links below!</p>
+
+            <div class="social">
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;2024 by Ethan Chan.</p>
+    </footer>
+
+
+
+    <!--Project Modals -->
+    <!-- Modal -->
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="ModalLabel">Ace Up</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview:</h6>
+                    <p>AceUP is a tabletop first-person shooter (FPS) based on the classic card game of Blackjack, but
+                        with
+                        a unique twist: everyone is cheating. This game shifts the focus from relying on luck to that
+                        requiring
+                        skill and strategy, this offers a fresh take on the traditional Blackjack experience. Players
+                        must
+                        cheat to attempt to get a perfect '21'. However, if they get caught, they face the consequence
+                        of a
+                        starting a free-for-all brawl with all the other opponents.</p>
+
+                    <button type="button" class="btn btn-info"
+                        onclick="window.location.href='https://ethano-chachano.itch.io/aceup';">Download Ace Up
+                        Here!</button>
+                    <br><br>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>Platform:</h6>
+                            <p>&emsp; Windows PC</p>
+                            <h6>Engine:</h6>
+                            <p>&emsp; Unity Engine</p>
+                            <h6>Language:</h6>
+                            <p>&emsp; C#</p>
+                            <h6>Tools Used:</h6>
+                            <ul>
+                                <li>Blender</li>
+                                <li>Photoshop/ Paint.net</li>
+                                <li>Audacity</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Ace_Up/1.png">
+                            <img class="modal_img" src="img/Ace_Up/2.png">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Ace_Up/3.png">
+                            <img class="modal_img" src="img/Ace_Up/4.png">
+                        </div>
+                    </div>
+                    <br>
+
+                    <h6><br>Additional Info:</h6>
+
+                    <h6>Final Year Project Report:</h6>
+                    <p>A final year project report was written, documenting the development
+                        process, features implemented, and the research conducted while creating the game. This can be
+                        viewed <a href="img/Ace_Up/Final Year Report (Submission).pdf">here</a>.<br><br></p>
+                    <h6>Develop:Brighton:</h6>
+                    <p>AceUp was showcased at Develop:Brighton, where I presented the game in collaboration with the
+                        University of Sussex alongside other indie and larger studios. During the showcase, I gathered
+                        feedback from playtesters who helped identify bugs and glitches, this feedback aided in the game
+                        being published in early December of 2024.</p>
+
+                    <img class="modal_img_additional" src="img/Ace_Up/exhibition.png">
+                    <h6>Blackjack Logic:</h6>
+                    <p>The Blackjack logic in AceUP was developed using object-oriented programming to create a deck and
+                        card management system. A card management script handled shuffling, drawing, and resetting the
+                        deck for each round, while a player hand script calculated each player's hand value according to
+                        Blackjack rules, including Ace values and the ability to swap cards when cheating. Players could
+                        manipulate their hands, which required real-time cheat detection through custom scripts that
+                        flagged suspicious actions. If cheating was detected, the game seamlessly transitioned to an
+                        FPS-style combat sequence, where throwing cards served as ammunition.</p>
+                    <p class="Comment">Click the images to view more!</p>
+                    <div class="row">
+                        <a href="img/Ace_Up/cardManager.cs" class="modal_img_additional col-sm-6"><img
+                                src="img/Ace_Up/cardManager.png" style="width: 100%;"></a>
+                        <a href="img/Ace_Up/playerHand.cs" class="modal_img_additional col-sm-6"><img
+                                src="img/Ace_Up/playerHand.png" style="width: 100%;"></a>
+                    </div>
+                    <h6>Enemy Pathfinding</h6>
+                    <p>Enemy pathfinding was implemented using Unity’s NavMesh system, allowing AI-controlled enemies to
+                        navigate the environment effectively. By baking a NavMesh into the scene, enemies could select
+                        random positions based on their proximity to other AIs and the playable character. The
+                        pathfinding script, 'fightAI', determined whether an enemy should move towards the playable
+                        character, the closest player, or a random location, adapting to the gameplay.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/Ace_Up/fightAI.cs"><img class="modal_img_additional" src="img/Ace_Up/FightAI.png"></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="ModalLabel">Finding Home</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview:</h6>
+                    <p>Finding Home is a story-driven game where you play as Remi, a young fox who has gotten lost and
+                        must find his way back to his parents. In this cozy narrative adventure, you interact with
+                        various residents in this small world, each offering unique dialogues and assistance. To help
+                        Remi navigate the area and find his parents, you must leave breadcrumbs along the way, creating
+                        a path to follow as you explore the island and uncover the stories within.</p>
+                    <button type="button" class="btn btn-info"
+                        onclick="window.location.href='https://ethano-chachano.itch.io/finding-home';">Download Finding
+                        Home Here!</button>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>Platform:</h6>
+                            <p>&emsp; Windows PC</p>
+                            <h6>Engine:</h6>
+                            <p>&emsp; Unity Engine</p>
+                            <h6>Language:</h6>
+                            <p>&emsp; C#</p>
+                            <h6>Tools Used:</h6>
+                            <ul>
+                                <li>MagicaVoxel</li>
+                                <li>Paint.net</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Finding_Home/1.png">
+                            <img class="modal_img" src="img/Finding_Home/2.png">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Finding_Home/3.png">
+                            <img class="modal_img" src="img/Finding_Home/4.png">
+                        </div>
+                    </div>
+                    <br>
+
+                    <h6><br>Additional Info:</h6>
+                    <h6>Games Job Live:</h6>
+                    <p>Finding Home was my submission for the Games Job Live - Game Parade Jam in November 2021. The
+                        game jam received a total of 53 entries, and my game placed 5th in the '3D Art' category and
+                        reached the top 3 in the 'Best Narrative' category. The game was also featured on the GJL
+                        YouTube channel, marking my first-ever entry into a game jam.</p>
+                    <p class="Comment">Click the images to view more!</p>
+                    <div class="row">
+                        <div class="modal_img_additional col-sm-4"><a
+                                href="https://www.youtube.com/live/UN-a7RXEzHc?si=YDh4d4q18snLB44D&t=1667"><img
+                                    src="img/Finding_Home/GJLLivestream.png" style="width: 100%;"></a></div>
+                        <div class="modal_img_additional col-sm-4"><a
+                                href="https://www.youtube.com/watch?v=DKuFXGV5MfU&ab_channel=GamesJobsLive"><img
+                                    src="img/Finding_Home/GJLCompilation.png" style="width: 100%;"></a></div>
+                    </div>
+                    <a href="https://itch.io/jam/gjl-game-parade-fall-2021/results/3d-art"><img
+                            class="modal_img_additional" src="img/Finding_Home/3DArtPlacement.png"></a>
+                    <h6>Dialogue System:</h6>
+                    <p>The game features 13 unique NPCs that players can interact with, each contributing to the story
+                        and world-building. The dialogue system was implemented early in development, as it was a core
+                        mechanic that drives the narrative forward. This system allowed players to engage with
+                        characters, uncover new information, and receive breadcrumbs to help Remi continue leaving a
+                        trail.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/Finding_Home/DialogueManager.cs"><img class="modal_img_additional"
+                            src="img/Finding_Home/DialogueManager.png"></a>
+                    <h6>Leave Something Behind:</h6>
+                    <p>Breadcrumbs were used to fit the theme of the game jam: 'Leave Something Behind'. Using Unity's
+                        Collider component and the OnTriggerExit() function, I was able to detect when and where
+                        breadcrumbs should be left behind. The use of breadcrumbs incentivizes players to communicate
+                        with the resident NPCs, as each one offers a varying amount to aid in the player's journey.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/Finding_Home/BreadCrumbs.cs"><img class="modal_img_additional"
+                            src="img/Finding_Home/Breadcrumbs.png"></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="ModalLabel">The Lab</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview:</h6>
+                    <p>
+                        The Lab is a story-driven adventure puzzle game where you awaken in a mysterious testing
+                        facility, guided by a strange voice. As you solve puzzles and explore the levels, you uncover
+                        pieces of the story, learning about your true identity and the purpose of the facility. The game
+                        challenges you to use your wits, sometimes offering instructions to help you escape. Every step
+                        you take brings you closer to unraveling the mysteries of the lab.</p>
+                    <button type="button" class="btn btn-info"
+                        onclick="window.location.href='https://ethano-chachano.itch.io/the-lab';">Download The Lab
+                        Here!</button>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>Platform:</h6>
+                            <p>&emsp; Windows PC</p>
+                            <h6>Engine:</h6>
+                            <p>&emsp; Unity Engine</p>
+                            <h6>Language:</h6>
+                            <p>&emsp; C#</p>
+                            <h6>Tools Used:</h6>
+                            <ul>
+                                <li>Blender</li>
+                                <li>MagicaVoxel</li>
+                                <li>Photoshop</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/The_Lab/1.png">
+                            <img class="modal_img" src="img/The_Lab/2.png">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/The_Lab/3.png">
+                            <img class="modal_img" src="img/The_Lab/4.png">
+                        </div>
+                    </div>
+                    <br>
+
+                    <h6><br>Additional Info:</h6>
+                    <h6>University Coursework:</h6>
+                    <p>The Lab was a group submission created in collaboration with my coursemates during my second year
+                        of university, earning a final grade of 92%. I contributed to the team as the lead programmer
+                        and lead level designer, also assisting with story writing. During development, I implemented
+                        many core features, including the dialogue system, the car puzzle, and the archery level.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/The_Lab/ProjectGrade.png"><img class="modal_img_additional"
+                            src="img/The_Lab/ProjectGradeCropped.png"></a>
+                    <h6>Project Planning:</h6>
+                    <p>
+                        Development of the game took place over the course of 4 months. Throughout the process, we
+                        regularly held meetings to review progress, utilizing Trello Boards and PlasticSCM (now Unity
+                        Version Control) to manage tasks, track milestones, and allow for smooth collaboration.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/The_Lab/TrelloBoard.png"><img class="modal_img_additional"
+                            src="img/The_Lab/TrelloBoard.png"></a>
+                    <h6>Testing Environment:</h6>
+                    <p>During the development process, as 3D assets were being created by my team members and before any
+                        levels were made, I created a testing scene where I could begin implementing features from the
+                        code. This allowed me to work on core gameplay mechanics in a controlled environment without
+                        having to wait for final assets. The testing scene was crucial for iterating on features and
+                        ensuring functionality before integrating them into the full levels. It helped streamline
+                        development and ensured that everything was working as expected when the levels were completed.
+                    </p>
+                    <img class="modal_img_additional" src="img/The_Lab/TestScene.png">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="ModalLabel">The Person, In The Cabin, In The Woods</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview:</h6>
+                    <p>The Person, In the Cabin, In the Woods is a horror puzzle game where you find yourself in a cabin
+                        at night. A cryptic computer guides you on your next steps as you must navigate the creepy
+                        environment, balancing your sanity, thirst, and sleepiness while avoiding the monster lurking
+                        outside. With your vitals low, how can you defeat the monster before it can get to you? What is
+                        the computer suggesting? Is there really a way to defeat the beast that lurks in the woods?</p>
+                    <button type="button" class="btn btn-info"
+                        onclick="window.location.href='https://ethano-chachano.itch.io/the-person-in-the-cabin-in-the-woods';">Download
+                        The Person, In The Cabin, In The Woods Here!</button>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>Platform:</h6>
+                            <p>&emsp; Windows PC</p>
+                            <h6>Engine:</h6>
+                            <p>&emsp; Unity Engine</p>
+                            <h6>Language:</h6>
+                            <p>&emsp; C#</p>
+                            <h6>Tools Used:</h6>
+                            <ul>
+                                <li>Blender</li>
+                                <li>Photoshop</li>
+                                <li>Audacity</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/The_Person_In_The_Cabin/1.png">
+                            <img class="modal_img" src="img/The_Person_In_The_Cabin/2.png">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/The_Person_In_The_Cabin/3.png">
+                            <img class="modal_img" src="img/The_Person_In_The_Cabin/4.png">
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <h6><br>Additional Info:</h6>
+                    <h6>Project Report:</h6>
+                    <p>A project report was written, documenting the development process, features implemented, and the
+                        research conducted while creating the game. This can be viewed <a
+                            href="img/The_Person_In_The_Cabin/Report.pdf">here</a>.<br><br></p>
+
+                    <h6>University Coursework:</h6>
+                    <p>The Person, In the Cabin, In the Woods is a game submitted for a university assignment in my
+                        final year, utilizing
+                        free 3D models sourced from online platforms like the Unity Asset Store, CGTrader, and Mixamo.
+                        However, the cabin itself was designed by myself in Blender to meet the specific requisites of
+                        the
+                        module for which the submission was created. The cabin features multiple rooms which the player
+                        must navigate in order to find specific items to aid in their survival.</p>
+                    <div class="row">
+                        <div class="modal_img_additional col-sm-4"><img src="img/The_Person_In_The_Cabin/Cabin1.png"
+                                style="width: 100%;">
+                        </div>
+                        <div class="modal_img_additional col-sm-4"><img src="img/The_Person_In_The_Cabin/Cabin2.png"
+                                style="width: 100%;">
+                        </div>
+                    </div>
+                    <img src="img/The_Person_In_The_Cabin/Cabin3.png" class="modal_img_additional">
+
+                    <h6>Technical Skills:</h6>
+                    <p>As this coursework was part of my third and final year, it tested my technical skills in greater
+                        depth. The game includes many features implemented around core aspects of the game development
+                        cycle, such as 3D modeling, 2D design, particle systems, audio, animation, and coding. This
+                        allowed me to demonstrate my proficiency in multiple areas of game development. This module
+                        challenged me to integrate these technical skills effectively, resulting in a polished final
+                        product.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="img/The_Person_In_The_Cabin/TechnicalSkills.png"><img class="modal_img_additional"
+                            src="img/The_Person_In_The_Cabin/TechnicalSkills.png"></a>
+
+                    <h6>GitHub:</h6>
+                    <p>GitHub was heavily used for code and project management throughout the development process,
+                        alongside Kanban boards and MS Sticky Notes for task organization. The version control features
+                        of GitHub allowed me to track changes and maintain a clean history of the game's development.
+                        Additionally, Kanban boards helped break the project into manageable tasks, serving as weekly
+                        goals to ensure I met self-set deadlines. These tools kept me organized and on track during my
+                        university studies.</p>
+                    <p class="Comment">Click the image to view more!</p>
+                    <a href="https://github.com/users/Ethano-ChaChano/projects/1/views/1"><img
+                            class="modal_img_additional" src="img/The_Person_In_The_Cabin/Kanban.png"></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="ModalLabel">Rebellion</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Overview:</h6>
+                    <p>AceUP is a tabletop first-person shooter (FPS) based on the classic card game of Blackjack, but
+                        with
+                        a unique twist: everyone is cheating. This game shifts the focus from relying on luck to that
+                        requiring
+                        skill and strategy, this offers a fresh take on the traditional Blackjack experience. Players
+                        must
+                        cheat to attempt to get a perfect '21'. However, if they get caught, they face the consequence
+                        of a
+                        starting a free-for-all brawl with all the other opponents.</p>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>Platform:</h6>
+                            <p>&emsp; Windows PC</p>
+                            <h6>Engine:</h6>
+                            <p>&emsp; Unity Engine</p>
+                            <h6>Language:</h6>
+                            <p>&emsp; C#</p>
+                            <h6>Tools Used:</h6>
+                            <ul>
+                                <li>Blender</li>
+                                <li>Photoshop/ Paint.net</li>
+                                <li>Audacity</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Ace_Up/1.png">
+                            <img class="modal_img" src="img/Ace_Up/2.png">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img class="modal_img" src="img/Ace_Up/3.png">
+                            <img class="modal_img" src="img/Ace_Up/4.png">
+                        </div>
+                    </div>
+                    <br>
+
+                    <h6>Additional Info:</h6>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/header_click.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
