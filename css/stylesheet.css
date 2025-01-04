@@ -168,16 +168,15 @@ ul {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 12vw;
   }
 
   h2 {
-    font-size: 17.5px;
+    font-size: 4.5vw;
   }
 
   #about .row {
     /* Allows columns to wrap on smaller screens */
-    margin-bottom: 10vh;
     padding: 0% 1% 0% 1%;
   }
 
@@ -190,14 +189,14 @@ ul {
   .header a {
     font-size: 200%;
     line-height: 25px;
-    padding: 0% 2.5% 0% 2.5%;
+    padding: 100% 2.5% 100% 2.5%;
   }
 
   /*SVG*/
   svg {
     width: 50px;
     fill: #ffffff;
-    margin: 50% 0% -50% 0%;
+    margin: 10vh 0% -25vh 0%;
   }
 
   /*Social Media Links*/
@@ -243,19 +242,19 @@ ul {
     background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
     margin: 10% 2% 0% 2%;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: justify;
+    height: fit-content;
   }
 
   #about .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
   }
 
   .aboutBorder {
@@ -296,6 +295,8 @@ ul {
   #project img {
     border-radius: 2.5%;
     width: 100%;
+    object-fit: contain;
+    margin-top: 5%;
   }
 
   /*Project Carousel*/
@@ -372,6 +373,10 @@ ul {
     background-position: center;
     margin: 2.5% 10%;
   }
+  #contact h1 {
+    text-align: center;
+    font-size: 12vw;
+  }
 
   .modal-content {
     background-color: #292333;
@@ -396,16 +401,15 @@ ul {
   }
 
   h1 {
-    font-size: 75px;
+    font-size: 12vw;
   }
 
   h2 {
-    font-size: 27.5px;
+    font-size: 4.5vw;
   }
 
   #about .row {
     /* Allows columns to wrap on smaller screens */
-    margin-bottom: 10vh;
     padding: 0% 1% 0% 1%;
   }
 
@@ -418,14 +422,14 @@ ul {
   .header a {
     font-size: 200%;
     line-height: 25px;
-    padding: 0% 2.5% 0% 2.5%;
+    padding: 100% 2.5% 100% 2.5%;
   }
 
   /*SVG*/
   svg {
     width: 75px;
     fill: #ffffff;
-    margin: 50% 0% -50% 0%;
+    margin: 0vh 0% -40vh 0%;
   }
 
   /*Social Media Links*/
@@ -471,7 +475,7 @@ ul {
     background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
     margin: 10% 2% 0% 2%;
-    height: 100vmin;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,6 +529,8 @@ ul {
   #project img {
     border-radius: 2.5%;
     width: 100%;
+    object-fit: contain;
+    margin-top: 5%;
   }
 
   /*Project Carousel*/
@@ -601,6 +607,10 @@ ul {
     background-position: center;
     margin: 2.5% 10%;
   }
+  #contact h1 {
+    text-align: center;
+    font-size: 7.5vw;
+  }
 
   .modal-content {
     background-color: #292333;
@@ -626,16 +636,15 @@ ul {
   }
 
   h1 {
-    font-size: 5vmax;
+    font-size: 11vw;
   }
 
   h2 {
-    font-size: 1.8vmax;
+    font-size: 4vw;
   }
 
   #about .row {
     /* Allows columns to wrap on smaller screens */
-    margin-bottom: 10vh;
     padding: 0% 1% 0% 1%;
   }
 
@@ -648,14 +657,14 @@ ul {
   .header a {
     font-size: 200%;
     line-height: 25px;
-    padding: 0% 5% 0% 5%;
+    padding: 100% 4.5% 100% 4.5%;
   }
 
   /*SVG*/
   svg {
     width: 3vw;
     fill: #ffffff;
-    margin: 35% 0% -35% 0%;
+    margin: 2vh 0% -35vh 0%;
   }
 
   /*Social Media Links*/
@@ -700,8 +709,8 @@ ul {
   #about {
     background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
-    margin: 5% 20% 0% 20%;
-    height: 100vmin;
+    margin: 5% 5% 0% 5%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -712,7 +721,7 @@ ul {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 75%;
   }
 
 
@@ -725,7 +734,7 @@ ul {
 
   #about h1 {
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 2.5%;
     font-size: 5vw;
   }
@@ -741,6 +750,7 @@ ul {
 
   #project h1 {
     margin-top: 2.5vh;
+    font-size: 5vw;
   }
 
   #project .carousel-item button {
@@ -754,6 +764,7 @@ ul {
     border-radius: 2.5%;
     width: 100%;
     object-fit: contain;
+    margin-top: 25px;
   }
 
   /*Project Carousel*/
@@ -830,6 +841,11 @@ ul {
     background-position: center;
     margin: 2.5% 10%;
   }
+  #contact h1 {
+    text-align: center;
+    font-size: 5vw;
+  }
+
 
   .modal-content {
     background-color: #292333;
