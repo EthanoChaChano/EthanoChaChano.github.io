@@ -1,13 +1,43 @@
-// Add active class to the current button (highlight it)
-var header = document.getElementById("header");
-var headerBtn = header.getElementsByClassName("headerBtn");
-for (var i = 0; i < headerBtn.length; i++) {
-    headerBtn[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+let blinkTextMenuLinks = document.querySelectorAll(".blink-text-menu a");
+blinkTextMenuLinks.forEach((link) => {
+  let letters = link.textContent.split("");
+  link.textContent = "";
+  letters.forEach((letter, i) => {
+    i += 1;
+    let span = document.createElement("span");
+    let delay = i / 40;
+    if (i % 2 === 0) {
+      delay -= 0.05;
+    } else {
+      delay += 0.05;
+    }
+    let letterOut = document.createElement("span");
+    letterOut.textContent = letter;
+    letterOut.style.transitionDelay = `${delay}s`;
+    letterOut.classList.add("out");
+    span.append(letterOut);
+    let letterIn = document.createElement("span");
+    letterIn.textContent = letter;
+    letterIn.style.transitionDelay = `${delay}s`;
+    letterIn.classList.add("in");
+    span.append(letterIn);
+    link.append(span);
+  });
+});
+
+
+document.querySelectorAll(".blink-text-menu a").forEach((link) => {
+  link.addEventListener("click", function () {
+    // Remove "active" class from all links before adding it to the clicked one
+    document.querySelectorAll(".blink-text-menu a").forEach((el) => {
+      el.classList.remove("active");
     });
-}
+
+    // Add "active" class to clicked link
+    this.classList.add("active");
+  });
+});
+
 
 // Function to check if the element is visible in the viewport
 function isElementVisible(element) {
