@@ -24,10 +24,10 @@
 
     <main>
         <section id="home">
-            <video autoplay muted loop id="backgroundVideo">
-                <source src="img/CoverVideo.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <div class="slideshow-container">
+                <img id="image1" class="slideshow-image" src="" alt="Slideshow Image">
+                <img id="image2" class="slideshow-image" src="" alt="Slideshow Image">
+            </div>
 
             <div class="title_overlay">
                 <div class="cursor"></div>
@@ -48,7 +48,7 @@
                 <a href="#home" style="text-decoration: none;">
                     <div class="zoom"><h1><b>ETHAN CHAN</b></h1></div>
                     
-                    <div class="zoom"><h2>
+                    <div class="zoom outline"><h2>
                         <span is="type-async" id="type-text"></span>
                         <span class="blinking-cursor">_</span>
                     </h2></div>
@@ -57,7 +57,7 @@
                 <a href="#about">
                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="6.443 47.497 187.114 105.008"
                         xmlns="http://www.w3.org/2000/svg" viewBox="6.443 47.497 187.114 105.008" role="presentation"
-                        aria-hidden="true" aria-label="">
+                        aria-hidden="true" aria-label="" class="zoom">
                         <g>
                             <path
                                 d="M174.476 51.261l-74.704 74.193L25.578 50.75c-4.287-4.316-11.566-4.341-15.882-.054s-4.341 11.565-.055 15.882l82.107 82.673c4.287 4.316 11.566 4.341 15.882.055l82.673-82.107c4.316-4.287 4.341-11.566.055-15.882s-11.235-4.342-15.882-.056z">
@@ -203,12 +203,12 @@
                     </div>
                 </div>
 
-                <button class="carousel-control-prev zoom" title="Previous" type="button"
+                <button class="carousel-control-prev" title="Previous" type="button"
                     data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next zoom" title="Next" type="button"
+                <button class="carousel-control-next" title="Next" type="button"
                     data-bs-target="#carouselExampleControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -712,6 +712,7 @@
     <script src="js/title_text.js"></script>
     <script src="js/cursor_hover.js"></script>
     <script src="js/fade_in.js"></script>
+    <script src="js/image_slideshow.js"></script>
 
 
 

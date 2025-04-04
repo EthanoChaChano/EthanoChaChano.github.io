@@ -19,6 +19,8 @@ body {
   text-align: center;
   font-family: 'LemonMilk', Verdana, Geneva, Tahoma, sans-serif;
   margin: 0%;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: -99;
 }
 
@@ -57,20 +59,29 @@ body {
   position: absolute;
   border-radius: 50%;
 }
+
 .shape.shape-1 {
   background: rgba(255, 204, 0, 1.00);
-  width: 120px;  height: 120px;
-  margin: -60px 0 0 -60px;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  z-index: 1;
 }
+
 .shape.shape-2 {
   background: rgba(87, 202, 255, 0.95);
-  width: 60px;  height: 60px;
-  margin: -30px 0 0 -30px;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  z-index: 2;
 }
+
 .shape.shape-3 {
   background: rgba(255, 165, 87, 0.75);
-  width: 40px;  height: 40px;
-  margin: -20px 0 0 -20px;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  z-index: 3;
 }
 
 ::-moz-selection {
@@ -111,6 +122,14 @@ ul {
   color: rgb(200, 200, 200);
 }
 
+.outline{
+  text-shadow: 
+  -1px -1px 0 black,
+   1px -1px 0 black,
+  -1px  1px 0 black,
+   1px  1px 0 black;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -121,6 +140,7 @@ ul {
   overflow: hidden;
   background-color: #17131E;
   z-index: 99;
+
   a {
     color: #473C5E;
     text-align: center;
@@ -159,9 +179,11 @@ ul {
         .in {
           opacity: 1;
           transform: translateX(0);
+          text-decoration: underline;
         }
       }
     }
+
     &.active {
       color: rgb(255, 204, 0);
       background-color: #292333;
@@ -179,13 +201,43 @@ ul {
     visibility: hidden;
   }
 }
+
 .zoom {
   transition: transform .2s;
 }
+
 .zoom:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
-  transform: scale(1.1); 
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+/* Slideshow container fits inside the section */
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  /* Prevent slideshow from affecting layout flow */
+}
+
+/* Ensure images fill the section properly */
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 1s ease-in-out, transform 5s ease-in-out;
+  opacity: 0;
+  transform: scale(1);
+  left: 0;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 #about .row {
@@ -267,8 +319,8 @@ ul {
 
 /* Smartphones ----------- */
 @media only screen and (max-width : 768px) {
-  .header {
-    display: none;
+  .sticky{
+    font-size: 9px;
   }
 
   body {
@@ -276,7 +328,7 @@ ul {
   }
 
   h1 {
-    font-size: 12vw;
+    font-size: 50px;
   }
 
   h2 {
@@ -290,6 +342,7 @@ ul {
 
   /* Style the header with a grey background and some padding */
   .header {
+    display: none;
     padding: 2% 0 2% 0;
   }
 
@@ -372,7 +425,6 @@ ul {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 2.5%;
-    font-size: 12vw;
   }
 
   #about p,
@@ -386,7 +438,6 @@ ul {
 
   #project h1 {
     margin-top: 2.5vh;
-    font-size: 12vw;
   }
 
   #project .carousel-item button {
@@ -480,7 +531,6 @@ ul {
 
   #contact h1 {
     text-align: center;
-    font-size: 12vw;
   }
 
   .modal-content {
