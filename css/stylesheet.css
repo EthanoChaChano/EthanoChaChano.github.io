@@ -123,12 +123,12 @@ ul {
   color: rgb(200, 200, 200);
 }
 
-.outline{
-  text-shadow: 
-  -1px -1px 0 black,
-   1px -1px 0 black,
-  -1px  1px 0 black,
-   1px  1px 0 black;
+.outline {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .sticky {
@@ -215,6 +215,13 @@ ul {
   transform: scale(1.1);
 }
 
+.masked-image {
+  mask-image: url('../img/wave-mask.svg');
+  mask-repeat: no-repeat;
+  mask-position: top;
+  mask-size: cover;
+}
+
 /* Slideshow container fits inside the section */
 .slideshow-container {
   width: 100%;
@@ -241,7 +248,7 @@ ul {
   transform: scale(1.05);
 }
 
-#about{
+#about {
   background-color: rgba(50, 50, 50, 0.5);
   background-position: center;
   height: fit-content;
@@ -335,7 +342,7 @@ ul {
   margin: 0;
 }
 
-.content{
+.content {
   z-index: 2;
   color: rgb(139, 174, 172);
   border-style: solid;
@@ -345,7 +352,7 @@ ul {
 
 /* Smartphones ----------- */
 @media only screen and (max-width : 768px) {
-  .sticky{
+  .sticky {
     font-size: 45%;
   }
 
@@ -393,14 +400,16 @@ ul {
     padding: 0% 1%;
     margin: 0% 8% 0% 8%;
   }
-  .content h1{
+
+  .content h1 {
     font-size: 75px;
   }
-  .content h2{
+
+  .content h2 {
     font-size: 25px;
   }
 
-  #about {    
+  #about {
     margin: 10% 2% 0% 2%;
     padding: 0% 2% 0% 2%;
   }
