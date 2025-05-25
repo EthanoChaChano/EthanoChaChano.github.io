@@ -1,5 +1,6 @@
 let scrollX = 0;
 let scrollY = 0;
+let mouseMoveTimeout;
 
 document.addEventListener("scroll", () => {
     scrollX = window.scrollX;
@@ -23,6 +24,17 @@ document.addEventListener("mousemove", (event) => {
     shapes.forEach((shape, index) => {
         setTimeout(() => {
             shape.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-        }, index * 100); // Adjust delay for stagger effect
+            shape.classList.remove("fade-out"); // Remove fade-out if active
+        }, index * 100);
     });
+
+    // Clear the previous inactivity timer
+    clearTimeout(mouseMoveTimeout);
+
+    // Set a timeout to fade out shapes when the mouse stops moving
+    mouseMoveTimeout = setTimeout(() => {
+        shapes.forEach((shape) => {
+            shape.classList.add("fade-out");
+        });
+    }, 1000); // 1 second delay for inactivity
 });

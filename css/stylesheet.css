@@ -38,6 +38,23 @@ body {
   opacity: 1;
 }
 
+.left {
+  position: relative;
+  transform: translateX(-150px);
+  transition: 1s all ease;
+}
+
+.right {
+  position: relative;
+  transform: translateX(150px);
+  transition: 1.5s all ease;
+}
+
+.left.active,
+.right.active {
+  transform: translateX(0);
+}
+
 .title_overlay {
   position: absolute;
   top: 0;
@@ -59,6 +76,13 @@ body {
   will-change: transform;
   position: absolute;
   border-radius: 50%;
+  opacity: 1;
+  transition: none;
+}
+
+.shape.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .shape.shape-1 {
@@ -217,9 +241,9 @@ ul {
 
 .masked-image {
   mask-image: url('../img/wave-mask.svg');
-  mask-repeat: no-repeat;
-  mask-position: top;
-  mask-size: cover;
+  mask-repeat: repeat-x;
+  mask-position: center;
+  mask-size: contain;
 }
 
 /* Slideshow container fits inside the section */
@@ -304,6 +328,7 @@ svg:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 #home h1 {
@@ -340,6 +365,23 @@ ul {
 .Comment {
   color: rgb(163, 167, 184);
   margin: 0;
+}
+
+#project .showcase {
+  background: none;
+  border: none;
+  scale: 0.75;
+}
+
+#project .showcase img {
+  margin-top: 0;
+}
+
+#project .project_link {
+  background-color: #292333;
+  border-color: #22202b;
+  border-width: 5px;
+  color: #eebf07;
 }
 
 .content {
@@ -459,6 +501,10 @@ ul {
     width: 100%;
     object-fit: contain;
     margin-top: 5%;
+  }
+
+  #project .showcase {
+    scale: 0.75;
   }
 
   /*Project Carousel*/
@@ -656,6 +702,10 @@ ul {
     margin-top: 5%;
   }
 
+  #project .showcase {
+    scale: 0.75;
+  }
+
   /*Project Carousel*/
   .carousel-inner {
     padding: 1em;
@@ -849,6 +899,10 @@ ul {
     width: 100%;
     object-fit: contain;
     margin-top: 25px;
+  }
+
+  #project .showcase {
+    scale: 0.75;
   }
 
   /*Project Carousel*/
