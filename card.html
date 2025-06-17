@@ -14,7 +14,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-    <a-scene arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
+    <a-scene arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio: 0.82'
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui='enabled: false;'>
         <a-assets>
             <a-asset-item id="avatar" src="ARCard/Avatar.glb"></a-asset-item>
@@ -30,15 +30,14 @@
                         value: ">
             </a-mixin>
 
-            <video id="video" loop="true" autoplay="true" src="ARCard/Links/BigBuckBunny.mp4" preload="metadata" muted>
-            </video>
+            <video id="video" loop="true" autoplay="true" src="ARCard/Video.mp4" preload="metadata" muted></video>
         </a-assets>
 
 
-        <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" type="pattern" url="marker.patt">
+        <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" type="pattern" url="ARCard/marker.patt">
         <!-- <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" preset="hiro"> -->
 
-            <a-image src="ARCard/ScreenBackground.svg" position="-1.5 0 -1.0" rotation="-90 0 0" scale="1 1 1"></a-image>
+            <!-- <a-image src="ARCard/ScreenBackground.svg" position="-0.25 0 -0.1" rotation="-90 0 0" scale="1 4 10"></a-image> -->
             <a-video id="cardVideo" src="#video" height="1" width="2" position="-1.5 0 1" rotation="-90 0 0"
                 autoplay="true" muted></a-video>
 
