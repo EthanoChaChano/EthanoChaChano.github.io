@@ -1,4 +1,5 @@
 let blinkTextMenuLinks = document.querySelectorAll(".blink-text-menu a");
+
 blinkTextMenuLinks.forEach((link) => {
   let letters = link.textContent.split("");
   link.textContent = "";
@@ -103,4 +104,18 @@ window.addEventListener('scroll', function() {
     lastActiveHeader = document.getElementById('headerHome');
   }
 });
+
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function delayedFunction() {
+blinkTextParent = document.querySelector(".blink-text-menu");
+blinkTextParent.style.display = "none";
+    await wait(1000); // Wait for 2 seconds
+blinkTextParent.style.display = "inherit";
+}
+
+delayedFunction();
 

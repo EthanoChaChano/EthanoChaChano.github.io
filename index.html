@@ -24,7 +24,7 @@
         <a id="headerContact" class="headerBtn" href="#contact">Contact</a>
     </div>
 
-    <main>
+    <main id="top">
         <section id="home">
             <div class="slideshow-container">
                 <img id="image1" class="slideshow-image" src="" alt="Slideshow Image">
@@ -81,7 +81,7 @@
                     <h1><b>About Me</b></h1>
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 left">
+                    <!-- <div class="col-sm-8 left">
                         <p>Hi! I'm Ethan, a game developer and programmer based in the United Kingdom.</p>
                         <p>Since I discovered my love of video games, I've been amazed by the way they immerse
                             players into new worlds. My journey into game development began when I
@@ -108,12 +108,148 @@
                         <p>
                             Today, I remain driven to expand my skillset by learning new technologies, while also
                             participating in game jams to continue to refine my abilities. </p>
+                    </div> -->
+
+                    <div class="col-sm-9 left">
+                        <div class="selectors">
+                            <button data-target="content_one" class="active">About Me</button>
+                            <button data-target="content_two">Work</button>
+                            <button data-target="content_three">Education</button>
+                            <button data-target="content_four">Skills</button>
+                        </div>
+
+                        <div class="content content_one active">
+                            <h1>Hi, I'm Ethan!</h1>
+                            <h2>22y/o Game Developer and Programmer from the United Kingdom</h2>
+                            <br>
+                            <div class="resumeBox icon" style="opacity: 1;"><a href="Ethan Chan - CV (2025).pdf"
+                                    target="_blank"><b style="opacity: 1;">Resume</b><img style="opacity: 1;"
+                                        src="img/svg/Resume.svg" alt="☐"></a></div>
+                            <a href="https://www.linkedin.com/in/ethanchan603/" target="_blank"><img class="icon zoom"
+                                    src="img/svg/LinkedIn.svg" alt="☐"></a>
+                            <a href="https://ethano-chachano.itch.io/" target="_blank"><img class="icon zoom"
+                                    src="img/svg/ItchIO.svg" alt="☐"></a>
+                            <a href="mailto:ethanochachano@gmail.com" target="_blank"><img class="icon zoom"
+                                    src="img/svg/Gmail.svg" alt="☐"></a>
+                            <br>
+                            <h3>For inquiries, please send me an email or drop a message on LinkedIn</h3>
+                        </div>
+
+                        <div class="content content_two">
+                            <h3>April 2025 - Present</h3>
+                            <h1>Outrun Digital</h1>
+                            <h2>Gameplay Programmer</h2>
+                            <br><br>
+
+                            <h3>January 2017 - Present</h3>
+                            <h1>Lee Garden Chinese Restaurant</h1>
+                            <h2>Professional Wait Staff</h2>
+                        </div>
+
+                        <div class="content content_three">
+
+                            <!-- <img src="img/icon.png" alt="school logo"> -->
+                            <h3>Sept 2021 - July 2024</h3>
+                            <h1>University of Sussex</h1>
+                            <h2>Brighton, East Sussex</h2>
+                            <h4>BSc in Games and Multimedia Environments</h4>
+                            <ul>
+                                <li>Graduated with a first class honours degree</li>
+                                <li>81% for my Final Year Project</li>
+                                <li>87% for Game Design and Development module</li>
+                                <li>92% for my second year group project</li>
+                            </ul>
+                            <br><br>
+                            <!-- <img src="img/icon.png" alt="school logo"> -->
+                            <h3>Sept 2019 - July 2021</h3>
+                            <h1>The Thomas Hardye School</h1>
+                            <h2>Dorchester, Dorset</h2>
+                            <h4>A-Levels:</h4>
+                            <ul>
+                                <li>Computer Science</li>
+                                <li>Mathematics</li>
+                                <li>Physics</li>
+                            </ul>
+                        </div>
+
+                        <div class="content content_four" style="text-align: center;">
+                            <h1>Software:</h1>
+                            <div class="thumb">
+                                <img src="img/svg/skills/unity-logo.svg" alt="☐">
+                                <h2>Unity</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Logo_Blender.svg" alt="☐">
+                                <h2>Blender</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/github-logo-svgrepo-com.svg" alt="☐">
+                                <h2>Github</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Git-logo.svg" alt="☐">
+                                <h2>Git</h2>
+                            </div>
+
+                            <h1>Programming Languages:</h1>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Logo_C_sharp.svg" alt="☐">
+                                <h2>C#</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Python_logo_01.svg" alt="☐">
+                                <h2>Python</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/HTML5_logo_and_wordmark.svg" alt="☐">
+                                <h2>HTML5</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/java-seeklogo.svg" alt="☐">
+                                <h2>Java</h2>
+                            </div>
+
+                            <h1>Adobe:</h1>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Adobe_Photoshop_CC_icon.svg" alt="☐">
+                                <h2>Photoshop</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Adobe_Illustrator_CC_icon.svg" alt="☐">
+                                <h2>Illustrator</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Adobe_Premiere_Pro_CC_icon.svg" alt="☐">
+                                <h2>Premiere Pro</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Adobe_After_Effects_CC_icon.svg" alt="☐">
+                                <h2>After Effects</h2>
+                            </div>
+
+                            <h1>Microsoft:</h1>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Microsoft_Office_Word_(2019–present).svg" alt="☐">
+                                <h2>Word</h2>
+                            </div>
+                            <div class="thumb">
+                                <img src="img/svg/skills/Microsoft_PowerPoint_2013-2019_logo.svg" alt="☐">
+                                <h2>Powerpoint</h2>
+                            </div>
+
+
+                        </div>
                     </div>
-                    <div class="col-sm-4 right">
-                        <img class="image zoom" src="img/Profile.png" title="A picture of myself!">
+                    <div class="col-sm-3 right">
+                        <div class="perspective">
+                            <div class="card-image">
+                                <img class="thumb" src="img/Profile.png">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; color: rgb(163, 167, 184);"> Thank you for exploring my work. I invite you
+                <p style="text-align: center; color: rgb(163, 167, 184);"> Thank you for exploring my work. I invite
+                    you
                     to discover my portfolio, where you can explore projects I've worked on both individually and as
                     part of a team.</p>
             </div>
@@ -129,13 +265,14 @@
                 <h2>Projects I've worked on</h2>
                 <p>Click to learn more!</p>
 
-                <h3 style="text-align: left; text-decoration: underline; padding-left: 3%;" class="left">Games:</h3>
+                <!-- <h3 style="text-align: left; text-decoration: underline; padding-left: 3%;" class="left">Games:</h3> -->
 
                 <div class="gallery js-flickity"
                     data-flickity='{ "autoPlay": 1500, "wrapAround": true, "prevNextButtons": false, "pageDots": true, "groupCells": 1}'>
                     <div class="gallery-cell">
                         <div class="right">
-                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal1">
+                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal"
+                                data-bs-target="#Modal1">
                                 <div class="card">
                                     <div class="img-wrapper"><img src="img/Ace_Up/Cover.png" class="d-block w-100"
                                             alt="...">
@@ -156,7 +293,8 @@
                     </div>
                     <div class="gallery-cell">
                         <div class="right">
-                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal4">
+                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal"
+                                data-bs-target="#Modal4">
                                 <div class="card">
                                     <div class="img-wrapper"><img src="img/The_Person_In_The_Cabin/Cover.png"
                                             class="d-block w-100" alt="...">
@@ -175,7 +313,8 @@
                     </div>
                     <div class="gallery-cell">
                         <div class="right">
-                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal3">
+                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal"
+                                data-bs-target="#Modal3">
                                 <div class="card">
                                     <div class="img-wrapper"><img src="img/The_Lab/Cover.png" class="d-block w-100"
                                             alt="...">
@@ -196,7 +335,8 @@
                     </div>
                     <div class="gallery-cell">
                         <div class="right">
-                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal5">
+                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal"
+                                data-bs-target="#Modal5">
                                 <div class="card">
                                     <div class="img-wrapper"><img src="img/Rebellion/Cover.png" class="d-block w-100"
                                             alt="...">
@@ -217,7 +357,8 @@
                     </div>
                     <div class="gallery-cell">
                         <div class="right">
-                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal" data-bs-target="#Modal2">
+                            <button type="button" class="gallery-button" title="Click Me!" data-bs-toggle="modal"
+                                data-bs-target="#Modal2">
                                 <div class="card">
                                     <div class="img-wrapper"><img src="img/Finding_Home/Cover.png" class="d-block w-100"
                                             alt="...">
@@ -260,15 +401,16 @@
             <p>or use one of these links below!</p>
 
             <div class="social">
-                <a href="mailto:ethanochachano@gmail.com"><img class="icon zoom" src="img/svg/Gmail.svg" alt="☐" /></a>
-                <a href="https://www.linkedin.com/in/ethanchan603/"><img class="icon zoom" src="img/svg/LinkedIn.svg"
-                        alt="☐" /></a>
-                <a href="https://ethano-chachano.itch.io/"><img class="icon zoom" src="img/svg/ItchIO.svg"
-                        alt="☐" /></a>
-                <a href="https://discord.com/users/533980221322297344"><img class="icon zoom" src="img/svg/Discord.svg"
-                        alt="☐" /></a>
-                <a href="https://www.instagram.com/ethan_chan077/"><img class="icon zoom" src="img/svg/Instagram.svg"
-                        alt="☐" /></a>
+                <a href="mailto:ethanochachano@gmail.com" target="_blank"><img class="icon zoom mail"
+                        src="img/svg/Gmail.svg" alt="☐" /></a>
+                <a href="https://www.linkedin.com/in/ethanchan603/" target="_blank"><img class="icon zoom linkedin"
+                        src="img/svg/LinkedIn.svg" alt="☐" /></a>
+                <a href="https://ethano-chachano.itch.io/" target="_blank"><img class="icon zoom itchIO"
+                        src="img/svg/ItchIO.svg" alt="☐" /></a>
+                <a href="https://discord.com/users/533980221322297344" target="_blank"><img class="icon zoom discord"
+                        src="img/svg/Discord.svg" alt="☐" /></a>
+                <a href="https://www.instagram.com/ethan_chan077/" target="_blank"><img class="icon zoom instagram"
+                        src="img/svg/Instagram.svg" alt="☐" /></a>
             </div>
 
         </section>
@@ -276,7 +418,7 @@
     </main>
 
     <footer>
-        <p>&copy;2024 by Ethan Chan.</p>
+        <p>&copy;2025 by Ethan Chan.</p>
     </footer>
 
 
@@ -343,7 +485,8 @@
                     <h6>Final Year Project Report:</h6>
                     <p>A final year project report was written, documenting the development
                         process, features implemented, and the research conducted while creating the game. This can be
-                        viewed <a href="img/Ace_Up/Final Year Report (Submission).pdf">here</a>.<br><br></p>
+                        viewed <a href="img/Ace_Up/Final Year Report (Submission).pdf" target="_blank">here</a>.<br><br>
+                    </p>
                     <h6>Develop:Brighton:</h6>
                     <p>AceUp was showcased at Develop:Brighton, where I presented the game in collaboration with the
                         University of Sussex alongside other indie and larger studios. During the showcase, I gathered
@@ -746,7 +889,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/title_text.js"></script>
     <script src="js/cursor_hover.js"></script>
+    <script src="js/cursor_rotator.js"></script>
     <script src="js/fade_in.js"></script>
+    <script src="js/about_content.js"></script>
     <script src="js/image_slideshow.js"></script>
 </body>
 

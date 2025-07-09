@@ -90,7 +90,8 @@ body {
   width: 40px;
   height: 40px;
   margin: -20px 0 0 -20px;
-  z-index: 1;
+  z-index: 3;
+  filter: blur(25px);
 }
 
 .shape.shape-2 {
@@ -99,6 +100,7 @@ body {
   height: 20px;
   margin: -10px 0 0 -10px;
   z-index: 2;
+  filter: blur(10px);
 }
 
 .shape.shape-3 {
@@ -106,7 +108,8 @@ body {
   width: 8px;
   height: 8px;
   margin: -4px 0 0 -4px;
-  z-index: 3;
+  z-index: 1;
+  filter: blur(2px);
 }
 
 ::-moz-selection {
@@ -193,7 +196,7 @@ ul {
 
     &:hover {
       color: rgb(210, 168, 1);
-      background-color: #3d354d;
+      /* background-color: #3d354d; */
 
       span {
         .out {
@@ -272,8 +275,22 @@ ul {
   transform: scale(1.05);
 }
 
+
+@keyframes pulseShadow {
+  0% {
+    box-shadow: 0 4px 15px rgba(115, 100, 155, 0.85);
+  }
+
+  50% {
+    box-shadow: 0 4px 20px rgba(115, 100, 155, 1.0);
+  }
+
+  100% {
+    box-shadow: 0 4px 15px rgba(115, 100, 155, 0.85);
+  }
+}
+
 #about {
-  background-color: rgba(50, 50, 50, 0.5);
   background-position: center;
   height: fit-content;
   display: flex;
@@ -281,16 +298,163 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   text-align: justify;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(115, 100, 155, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(70, 60, 95, 0.85);
+
+  animation: pulseShadow 3s ease-in-out infinite;
 }
 
 #about .row {
   display: flex;
   justify-content: center;
   /* Centers the columns horizontally */
-  align-items: center;
+  /* align-items: center; */
   /* Centers the columns vertically (if they have different heights) */
   flex-wrap: wrap;
   padding: 0% 1% 0% 1%;
+}
+
+.perspective {
+  width: 100%;
+  perspective: 1000px;
+}
+
+#top {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.card-image {
+  width: 270px;
+  height: 413px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.05s ease;
+}
+
+.card-image .thumb {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.selectors {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 15px;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 15px;
+    width: 24%;
+    font-size: 16px;
+    color: #22202b;
+
+    &.active {
+      background-color: #eebf07;
+    }
+  }
+}
+
+#about .content {
+  display: none;
+  background: rgba(195, 195, 195, 0.1);
+  box-shadow: 5px 5px 4px rgba(25, 25, 25, 0.85);
+  border-radius: 15px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 25px;
+
+  h1 {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+  }
+
+  h2 {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 16px;
+    margin: 0;
+  }
+
+  h3 {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    margin: 0;
+  }
+
+  h4 {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: inherit;
+    margin: 0;
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+  ul {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: inherit;
+    margin: 0;
+    margin-left: 25px;
+  }
+
+  img {
+    width: 35px;
+    margin: 0px;
+    opacity: 0.5;
+  }
+
+  .thumb {
+    font-family: 'LemonMilk', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: inline-block;
+    opacity: 1 !important;
+    margin: 10px 0px 25px 25px
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .resumeBox {
+    width: fit-content;
+    border-radius: 10px;
+    border: 1.5px solid rgba(115, 100, 155, 0.85);
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    transition: background-color 0.5s ease;
+  }
+
+  .resumeBox:hover {
+    background-color: rgba(115, 100, 155, 0.85);
+  }
+
+  &.content_one {
+    h3 {
+      margin-top: 50px;
+    }
+  }
+}
+
+#about .content.active {
+  display: block;
 }
 
 footer {
@@ -308,8 +472,29 @@ svg:hover {
 }
 
 .icon {
-  width: 5%;
+  width: 5px;
   margin: 5px;
+  border-radius: 50%;
+
+  &.mail {
+    background-color: #dba14a;
+  }
+
+  &.linkedin {
+    background-color: #0a66c2;
+  }
+
+  &.itchIO {
+    background-color: #f95b5b;
+  }
+
+  &.discord {
+    background-color: #5664f2;
+  }
+
+  &.instagram {
+    background-color: #fd3764;
+  }
 }
 
 .icon:hover {
@@ -362,6 +547,11 @@ ul {
   text-align: justify;
 }
 
+.modal-header .btn-close {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+}
+
 .Comment {
   color: rgb(163, 167, 184);
   margin: 0;
@@ -384,7 +574,7 @@ ul {
   color: #eebf07;
 }
 
-.content {
+#home .content {
   z-index: 2;
   color: rgb(139, 174, 172);
   border-style: solid;
@@ -392,10 +582,25 @@ ul {
   border-width: medium;
 }
 
+#contact {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(115, 100, 155, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(70, 60, 95, 0.85);
+
+  animation: pulseShadow 3s ease-in-out infinite;
+}
+
 /* Smartphones ----------- */
 @media only screen and (max-width : 768px) {
   .sticky {
     font-size: 45%;
+    padding: 15px 0px;
+      backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(23, 19, 30, 0.85);
   }
 
   h1 {
@@ -428,8 +633,8 @@ ul {
 
   /*Social Media Links*/
   .icon {
-    width: 12%;
-    margin: 5px;
+    width: 40px;
+    margin: 8px 2px 8px 2px;
   }
 
   #home {
@@ -438,22 +643,82 @@ ul {
     min-height: 100%;
   }
 
-  .content {
+  #home .content {
     padding: 0% 1%;
     margin: 0% 8% 0% 8%;
   }
 
-  .content h1 {
+  #home .content h1 {
     font-size: 75px;
   }
 
-  .content h2 {
+  #home .content h2 {
     font-size: 25px;
   }
 
   #about {
     margin: 10% 2% 0% 2%;
     padding: 0% 2% 0% 2%;
+
+    .content {
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 5px;
+        text-align: left;
+      }
+
+      h3 {
+        font-size: 12px;
+        text-align: left;
+      }
+
+      h4 {
+        text-align: left;
+        margin-left: 5px;
+      }
+
+      ul {
+        margin-left: 5px;
+        padding-left: 20px;
+      }
+
+      li {
+        text-align: left;
+      }
+
+      img {
+        width: 40px;
+      }
+
+      .thumb {
+        width: 80px;
+        margin: 15px;
+
+        h2 {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+
+    .col-sm-3 {
+      display: none;
+    }
+
+    .selectors {
+      text-align: center;
+      padding-left: 0px;
+
+      button {
+        font-size: 16px;
+        width: 45%;
+      }
+    }
   }
 
   #about .image {
@@ -479,6 +744,7 @@ ul {
   #about p,
   #about ul {
     font-size: 16px;
+    text-align: justify !important;
   }
 
   #project {
@@ -577,7 +843,6 @@ ul {
   }
 
   #contact {
-    background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
     margin: 2.5% 10%;
     padding: 0% 2% 0% 2%
@@ -634,7 +899,7 @@ ul {
 
   /*Social Media Links*/
   .icon {
-    width: 10%;
+    width: 70px;
     margin: 5px;
   }
 
@@ -644,12 +909,59 @@ ul {
     min-height: 100%;
   }
 
-  .content {
+  #home .content {
     padding: 0% 1%;
   }
 
   #about {
     margin: 10% 2% 0% 2%;
+
+        .content {
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 5px;
+        text-align: left;
+      }
+
+      h3 {
+        font-size: 12px;
+        text-align: left;
+      }
+
+      h4 {
+        text-align: left;
+        margin-left: 5px;
+      }
+
+      ul {
+        margin-left: 5px;
+        padding-left: 20px;
+      }
+
+      li {
+        text-align: left;
+      }
+
+      img {
+        width: 40px;
+      }
+
+      .thumb {
+        width: 80px;
+        margin: 15px;
+
+        h2 {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+        }
+            .thumb{height: 70%; width: 70%;}
   }
 
   #about .image {
@@ -776,7 +1088,6 @@ ul {
   }
 
   #contact {
-    background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
     margin: 2.5% 10%;
   }
@@ -833,7 +1144,7 @@ ul {
 
   /*Social Media Links*/
   .icon {
-    width: 4.5%;
+    width: 45px;
     margin: 5px;
   }
 
@@ -843,7 +1154,7 @@ ul {
     min-height: 100%;
   }
 
-  .content {
+  #home .content {
     padding: 0% 1%;
   }
 
@@ -975,7 +1286,6 @@ ul {
   }
 
   #contact {
-    background-color: rgba(50, 50, 50, 0.5);
     background-position: center;
     margin: 2.5% 10%;
   }
